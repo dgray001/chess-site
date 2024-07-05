@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from 'vue-router';
+import HelloWorld from './components/HelloWorld.vue';
+import { ref } from 'vue';
 
-const dark_logo = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+const dark_logo = ref(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
 </script>
 
 <template>
@@ -11,7 +12,8 @@ const dark_logo = window.matchMedia && window.matchMedia('(prefers-color-scheme:
     <img v-else alt="Vue logo" class="logo" src="@/assets/logo_light.png" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="
+      " />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
